@@ -31,7 +31,7 @@ export const logout= (req,res)=>{
         console.log("Error in the logout controller",error.message);
         res.status(500).json({error:"Internal Server Error"});
     }  
-}
+};
 
 export const signup=async(req,res)=>{
     try {
@@ -55,8 +55,8 @@ export const signup=async(req,res)=>{
             username,
             password:hashedPassword,
             gender,
-            profilePic:gender==="male"?boyProfilePic:girlProfilePic
-        })
+            profilePic:gender==="male"?boyProfilePic:girlProfilePic,
+        });
         if(newUser){
             generateTokenAndSetCookie(newUser._id,res);
             await newUser.save();
@@ -73,4 +73,4 @@ export const signup=async(req,res)=>{
         console.log("Error in the signup controller",error.message);
         res.status(500).json({error:"Internal Server Error"});
     }
-}  
+};  

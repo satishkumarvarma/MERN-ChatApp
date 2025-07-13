@@ -1,6 +1,5 @@
 import React from 'react'
 import SearchInput from './SearchInput';
-import Conversation from './Conversation';
 import Conversations from './Conversations';
 import LogoutButton from './LogoutButton';
 
@@ -12,7 +11,7 @@ const Sidebar = () => {
             <Conversations />
  			<LogoutButton /> 
  		</div>
-  )
-}
+  );
+};
 
 export default Sidebar;
