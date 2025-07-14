@@ -6,7 +6,8 @@
   "scripts": {
     "server": "nodemon backend/server.js",
     "start": "node backend/server.js",
-    "build":"npm install && npm install --prefix frontend && npm run build --prefix frontend"
+    "build":"npm install && npm install --prefix frontend && npm run build --prefix frontend",
+    "rebuild": "rm -rf node_modules package-lock.json && npm install && npm run build"
   },
   "type":"module",
   "keywords": [],
